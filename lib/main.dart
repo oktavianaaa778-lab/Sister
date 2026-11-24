@@ -1,35 +1,29 @@
 import 'package:flutter/material.dart';
-import 'splash_screen.dart';
+import 'login.dart';
 
-void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-  runApp(const PresensiKuApp());
-}
+void main() => runApp(const PresensiApp());
 
-class PresensiKuApp extends StatelessWidget {
-  const PresensiKuApp({super.key});
+const Color primary = Color(0xFF5B91C6);
+const Color darkBlue = Color(0xFF294866);
+const Color lightBlue = Color(0xFFE5F1FB);
+const Color background = Color(0xFFF4F7FA);
+const Color ink = Color(0xFF263746);
 
+class PresensiApp extends StatelessWidget {
+  const PresensiApp({super.key});
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'PresensiKu',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        useMaterial3: true,
-        fontFamily: 'Arial',
-        scaffoldBackgroundColor: const Color(0xFFF7F9FC),
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF598BC0),
-          primary: const Color(0xFF598BC0),
+  Widget build(BuildContext context) => MaterialApp(
+        title: 'BROTHER',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          useMaterial3: true,
+          scaffoldBackgroundColor: background,
+          colorScheme: ColorScheme.fromSeed(seedColor: primary),
+          appBarTheme: const AppBarTheme(
+              backgroundColor: primary,
+              foregroundColor: Colors.white,
+              elevation: 0),
         ),
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Color(0xFFF7F9FC),
-          foregroundColor: Color(0xFF243447),
-          centerTitle: true,
-          elevation: 0,
-        ),
-      ),
-      home: const SplashScreen(),
-    );
-  }
+        home: const LoginScreen(),
+      );
 }

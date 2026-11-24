@@ -1,20 +1,28 @@
-name: presensiku
-description: Aplikasi presensi sekolah berbasis Flutter.
+name: flutter_application_1
+description: Aplikasi presensi siswa
 publish_to: "none"
+
 version: 1.0.0+1
 
 environment:
-  sdk: ">=3.3.0 <4.0.0"
+  sdk: ^3.6.0
 
 dependencies:
   flutter:
     sdk: flutter
-  image_picker: ^1.1.2
+
+  cupertino_icons: ^1.0.8
+  permission_handler: ^12.0.0
+  location: ^8.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^4.0.0
+  flutter_lints: ^5.0.0
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets\images\logo.png
+    - assets\images\pp.jpg
